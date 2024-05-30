@@ -1,33 +1,29 @@
-const mongoose = require('mongoose');
-const Schmea = mongoose.Schema;
+const mongoose= require("mongoose");
 
-const ProductModel = new Schmea(
-    {
-        productName: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: false
-        },
-        price: {
-            type: Number,
-            required: true
-        },
-        availableStock: {
-            type: Number,
-            required: true
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now()
-        },
-        updatedAt: {
-            type: Date,
-            default: Date.now()
-        }
-    }
-)
+const ProductModel= new mongoose.Schema({
+    // name, email, phone, city
+    name:{
+         type:String,
+         required:true
+    },
+    userNo:{
+        type:Number,
+        
+    },
+    earn:{
+        type:Number,
+        default:false
+    },
+   expense:{
+       type:Number, 
+   },
+   date:{
+        type:String,
+   },
+   work:{
+        type:String,
+   }
 
-module.exports = mongoose.model('products', ProductModel);
+})
+
+module.exports = mongoose.model('products', ProductModel)

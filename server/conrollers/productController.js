@@ -26,7 +26,7 @@ const createProduct = async (req, res) => {
 const getProducts = async (req, res) => {
     try {
         // Delay for 60 seconds (60000 milliseconds)
-        await new Promise(resolve => setTimeout(resolve, 60000));
+        await new Promise(resolve => setTimeout(resolve, 40000));
 
         const products = await Product.find();
         res.status(200).json(products);

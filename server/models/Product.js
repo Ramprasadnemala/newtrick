@@ -7,8 +7,8 @@ const ProductModel= new mongoose.Schema({
          required:true
     },
     userNo:{
-        type:Number,
-        
+        type:String,
+        required:true
     },
     earn:{
         type:Number,
